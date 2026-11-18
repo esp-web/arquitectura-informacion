@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ededeb">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Arquitectura de la información · Interfaces gráficas de usuario · EASD Sevilla</title>
+<meta name="description" content="Presentación de teoría sobre arquitectura de la información. Interfaces gráficas de usuario, EASD Sevilla.">
+<link rel="preload" href="fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="mode-read">
+
+<a class="skip" href="#deck">Saltar al contenido</a>
+
+<header class="bar" id="bar">
+  <a class="wm" href="#portada">EASD<br>Sevilla</a>
+  <ol class="crumbs" id="crumbs" aria-label="Estás en"></ol>
+  <div class="tools">
+    <span class="count" id="count"></span>
+    <button type="button" class="tbtn" id="btn-motion" aria-pressed="false">Pausar animación</button>
+    <button type="button" class="tbtn" id="btn-index" aria-haspopup="dialog">Índice</button>
+    <button type="button" class="tbtn pill" id="btn-mode">Diapositivas</button>
+    <button type="button" class="tbtn only-slides" id="btn-full">Pantalla completa</button>
+  </div>
+</header>
+
+<p class="sr" id="live" aria-live="polite"></p>
+<main class="deck" id="deck">
+
+<!-- ===================== PORTADA ===================== -->
+<section class="s cover" id="portada" data-title="Portada">
+  <div class="band"><img class="bw" src="img/portada-prototipo.webp" alt="Manos sobre una mesa de madera revisando un prototipo en papel de la interfaz de una web" width="2400" height="1599" fetchpriority="high"></div>
+  <img class="ribbon" src="img/svg/cinta-portada.svg" alt="" width="1000" height="300">
+  <p class="meta"><span>Interfaces gráficas de usuario</span><span>EASD Sevilla</span></p>
+  <div class="cover-main">
+    <h1>Arquitectura<br>de la información</h1>
+    <a class="pill go" href="#c1" data-go="next">Empezar <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="cover-side">
+    <p>Cómo organizar, etiquetar y conectar los contenidos de un producto digital para que el usuario encuentre lo que busca.</p>
+    <div class="row">
+      <img class="bw" src="img/cardsorting.webp" alt="Tarjetas de papel agrupadas en columnas sobre una mesa de madera durante un card sorting" width="856" height="563" loading="lazy" decoding="async">
+      <button type="button" class="lc" data-open-index><span>Índice</span><b>10 capítulos</b></button>
+    </div>
+  </div>
+  <div class="marq" aria-hidden="true"><span>Una buena arquitectura de la información pasa inadvertida · Una buena arquitectura de la información pasa inadvertida · </span><span>Una buena arquitectura de la información pasa inadvertida · Una buena arquitectura de la información pasa inadvertida · </span></div>
+</section>
+
+<section class="s sep" id="c1" data-short="Fundamentos" data-ribbon="capítulo 1 · fundamentos · capítulo 1 · fundamentos" data-num="Capítulo 1">
+  <h2>Arquitectura de la información</h2>
+  <p class="lead">Qué es, quién la realiza, qué problemas soluciona y cuándo hace falta.</p>
+</section>
+
+<section class="s mindmap" id="definicion">
+  <h3>¿Qué es la arquitectura de la información?</h3>
+  <div class="mm">
+    <p class="mm-c">Arquitectura de la información</p>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-1.svg" alt="" width="1600" height="700">
+      <div class="mm-n l" style="--x:16%;--y:15.7%"><b>Organizar</b>Agrupar y clasificar los contenidos.</div>
+    </div>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-2.svg" alt="" width="1600" height="700">
+      <div class="mm-n l" style="--x:16%;--y:50%"><b>Estructurar</b>Definir la jerarquía y las relaciones.</div>
+    </div>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-3.svg" alt="" width="1600" height="700">
+      <div class="mm-n l" style="--x:16%;--y:84.3%"><b>Presentar</b>Etiquetar y hacer visible la navegación.</div>
+    </div>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-4.svg" alt="" width="1600" height="700">
+      <div class="mm-n" style="--x:84%;--y:15.7%"><b>¿Dónde?</b>En un producto digital: web, app, panel, videojuego…</div>
+    </div>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-5.svg" alt="" width="1600" height="700">
+      <div class="mm-n" style="--x:84%;--y:50%"><b>¿Para qué?</b>Para que el usuario encuentre lo que busca, rápido y sin confusión.</div>
+    </div>
+    <div class="mm-g step">
+      <img class="mm-lines" src="img/svg/mapa-rama-6.svg" alt="" width="1600" height="700">
+      <div class="mm-n" style="--x:84%;--y:84.3%"><b>¿Quién?</b>El arquitecto o la arquitecta de la información.</div>
+    </div>
+  </div>
+  <p class="mm-def step">En resumen: un conjunto de decisiones sobre cómo organizar, estructurar y presentar de forma óptima los contenidos de un producto digital. La abreviamos <b><abbr title="Arquitectura de la información">Arq. Inf.</abbr></b></p>
+</section>
+
+<section class="s state" data-title="Dónde, qué y cómo">
+  <h3 class="sr">Dónde, qué y cómo</h3>
+  <p class="pre">La arquitectura de la información es…</p>
+  <p class="big">una estructura que permita al usuario saber dónde está, qué puede hacer y dónde encontrar lo que necesita.</p>
+  <figure class="ph"><img class="bw" src="img/libro-manos.webp" alt="Manos que hojean un libro abierto sobre una mesa" width="1125" height="750" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Morville y Rosenfeld (2007)</h3>
+  <div class="txt">
+    <p>Autores clásicos de la disciplina. Para ellos, la arquitectura de la información es:</p>
+    <ul class="dots">
+      <li>El diseño estructural de los espacios de información compartida.</li>
+      <li>La unión de los sistemas de organización, etiquetado y navegación de una aplicación.</li>
+      <li>El arte y la ciencia de estructurar la información para facilitar su uso y su acceso.</li>
+    </ul>
+  </div>
+  <figure class="fig tall"><img src="img/libro-morville.webp" alt="Portada del libro Information Architecture, de Rosenfeld, Morville y Arango, con un oso polar" width="1000" height="1500" loading="lazy" decoding="async"><figcaption>Information Architecture (O'Reilly), la obra de referencia.</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>El arquitecto o la arquitecta de la información</h3>
+  <div class="txt">
+    <p>Diseña la organización, el etiquetado, la navegación y la búsqueda que ayudan a los usuarios a encontrar y gestionar la información.</p>
+    <p>Es uno de los primeros perfiles que traduce lo decidido en UX a elementos que tendrán forma visual en la interfaz.</p>
+  </div>
+  <div class="panel">
+    <p class="ptitle">Se encarga de diseñar:</p>
+    <ul class="rows">
+      <li>El sistema de clasificación de la información.</li>
+      <li>El etiquetado de las opciones.</li>
+      <li>La estructura de navegación y los flujos.</li>
+      <li>El sistema de búsqueda.</li>
+      <li>El inventario de contenidos.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s cards" id="dificultades">
+  <h3>Principales dificultades</h3>
+  <p class="src">Según Morville y Rosenfeld (2007)</p>
+  <ol class="cardset">
+    <li><span><b>Ambigüedad del lenguaje</b>Llamamos de varias formas a las mismas cosas, y los términos cambian según el contexto geográfico, social o generacional.</span></li>
+    <li><span><b>Heterogeneidad de propósitos</b>Una biblioteca solo busca que encuentres el libro; una web debe dar acceso por artículo, capítulo, sección, cita…</span></li>
+    <li><span><b>Diferentes perspectivas</b>Cada autor organiza según su propio modelo mental. La referencia debe ser el usuario final.</span></li>
+    <li><span><b>Aspectos culturales</b>Los de la sociedad y los de la propia organización, con sus restricciones internas.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="ucc">
+  <h3>Usuario, contenido y contexto</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li><b>Usuarios:</b> qué saben del tema y qué necesitan hacer, encontrar o aprender.</li>
+      <li><b>Contenido:</b> de qué contenido disponemos y cuál necesitamos.</li>
+      <li><b>Contexto:</b> objetivos del usuario y del negocio, personas implicadas, dispositivos y limitaciones.</li>
+    </ul>
+    <p class="note">Por eso, antes de diseñar la arquitectura hay que investigar con usuarios.</p>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/usuario-contenido-contexto.svg" alt="Diagrama de tres círculos solapados, usuario, contenido y contexto, con la arquitectura de la información en la intersección. Contenido: qué información hay disponible y qué relevancia tiene para el usuario. Contexto: dónde busca el usuario el contenido y cuándo, por qué y cómo interactúa con él. Usuario: quién consume el contenido, qué valor le aporta y qué expectativas previas tiene." width="1000" height="540" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s checks-s">
+  <h3>Ideas básicas</h3>
+  <p class="lead">Seis ideas para no perder nunca de vista al usuario.</p>
+  <ul class="checks">
+    <li>Organiza la información desde el punto de vista del usuario final.</li>
+    <li>Ofrece la información de un modo simple.</li>
+    <li>Usa palabras que el usuario entienda.</li>
+    <li>Muestra con claridad dónde está el usuario.</li>
+    <li>Muestra con claridad los pasos que puede dar.</li>
+    <li class="f">Busca su satisfacción dentro de la lógica del negocio.</li>
+  </ul>
+</section>
+
+<section class="s state" data-title="Pasa inadvertida">
+  <h3 class="sr">Pasa inadvertida</h3>
+  <p class="big">Una buena arquitectura de la información pasa inadvertida.</p>
+  <p class="lead">Los usuarios solo la notan cuando está mal hecha: cuando la navegación confunde o la organización no tiene sentido. Si todo va bien, la experiencia es natural y eficiente.</p>
+  <figure class="ph"><img class="bw" src="img/edificio.webp" alt="Edificio de curvas blancas continuas, sin aristas, con una persona en bicicleta delante" width="500" height="750" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Problemas de arquitectura en una interfaz</h3>
+  <div class="txt">
+    <p>Pueden aparecer solos o combinados. No son los únicos: también hay problemas técnicos, visuales o de interacción.</p>
+  </div>
+  <ol class="cardset two">
+    <li><span><b>Comunicativos</b>Tono o léxico inadecuado: el producto habla la jerga de la organización y el usuario tiene que esforzarse para entenderlo.</span></li>
+    <li class="f"><span><b>De navegación y ubicación</b>Al usuario le cuesta encontrar los contenidos o moverse entre ellos.</span></li>
+  </ol>
+</section>
+
+<section class="s q" id="cuando">
+  <h3>¿Cuándo hace falta diseñar la <abbr title="arquitectura de la información">Arq. Inf.</abbr>?</h3>
+  <div class="answer step"><p>Cuando el volumen de información obliga a agrupar términos o ideas, y esos grupos deben etiquetarse según el modelo mental de los usuarios.</p></div>
+</section>
+
+<section class="s sep" id="c3" data-short="Inventario" data-ribbon="qué hay · qué falta · qué se queda · qué sobra" data-num="Capítulo 2">
+  <h2>Inventario de contenidos</h2>
+  <p class="lead">No podemos organizar algo sin saber qué estamos organizando.</p>
+  <ul class="sub">
+    <li><a href="#inventario"><span class="im"><img class="dg" src="img/svg/tabla.svg" alt="" width="300" height="170" loading="lazy" decoding="async"></span><b>Inventario</b>Completo o parcial.</a></li>
+    <li><a href="#modelo"><span class="im"><img class="dg" src="img/svg/modelo-producto.svg" alt="" width="800" height="620" loading="lazy" decoding="async"></span><b>Modelo de contenido</b>Para proyectos nuevos.</a></li>
+    <li><a href="#recopilar"><span class="im"><img class="bw" src="img/libro-manos.webp" alt="" width="1125" height="750" loading="lazy" decoding="async"></span><b>Recopilación</b>Las preguntas clave.</a></li>
+  </ul>
+</section>
+
+<section class="s split" id="inventario">
+  <h3>Inventario de contenidos</h3>
+  <div class="txt">
+    <p>En un rediseño partimos de contenido que ya existe. Hay que analizarlo para decidir qué se queda, qué se descarta y qué falta. Basta una hoja de cálculo.</p>
+    <ul class="dots">
+      <li><b>Completo:</b> todas las páginas, todos los archivos (PDF, vídeo, audio, imágenes) y el contenido generado por los usuarios.</li>
+      <li><b>Parcial:</b> da una idea de los tipos de contenido, los niveles y las categorías.</li>
+    </ul>
+  </div>
+  <figure class="fig tablefig"><table class="inv"><thead><tr><th scope="col">Página</th><th scope="col">Ubicación</th><th scope="col">Plantilla</th><th scope="col">Tipo</th><th scope="col">Modificada</th><th scope="col">Decisión</th></tr></thead><tbody><tr><td>Inicio</td><td>/</td><td>Portada</td><td>Navegación</td><td>12/09/2025</td><td><span class="st">Mantener</span></td></tr><tr><td>Estudios</td><td>/estudios</td><td>Listado</td><td>Navegación</td><td>03/06/2025</td><td><span class="st">Revisar</span></td></tr><tr><td>Diseño gráfico</td><td>/estudios/grafico</td><td>Ficha</td><td>Contenido</td><td>15/01/2024</td><td><span class="st hot">Actualizar</span></td></tr><tr><td>Matrícula</td><td>/secretaria/matricula</td><td>Formulario</td><td>Interacción</td><td>20/05/2025</td><td><span class="st">Mantener</span></td></tr><tr><td>Noticias 2019</td><td>/noticias/2019</td><td>Listado</td><td>Contenido</td><td>11/11/2019</td><td><span class="st hot">Eliminar</span></td></tr><tr><td>Contacto</td><td>/contacto</td><td>Formulario</td><td>Interacción</td><td>02/02/2025</td><td><span class="st">Mantener</span></td></tr></tbody></table><figcaption>Ejemplo de inventario en una hoja de cálculo: qué hay, dónde está y qué hacer con cada página.</figcaption></figure>
+</section>
+
+<section class="s cards" id="inventario-ventajas">
+  <h3>Ventajas de crear un inventario de contenidos</h3>
+  <ol class="cardset">
+    <li><span><b>Saber qué hay</b>Una lista real de páginas y archivos, sin depender de la memoria del cliente.</span></li>
+    <li><span><b>Decidir qué se queda</b>Detecta contenido obsoleto, duplicado o que nadie visita.</span></li>
+    <li><span><b>Ver qué falta</b>Comparado con lo que necesita el usuario, revela los huecos.</span></li>
+    <li><span><b>Base para la taxonomía</b>Muestra los tipos de contenido y las categorías que ya existen.</span></li>
+  </ol>
+  <p class="foot">También ayuda a calcular el trabajo de migrar o reescribir el contenido en un rediseño.</p>
+</section>
+
+<section class="s split" id="modelo">
+  <h3>Modelo de contenido</h3>
+  <div class="txt">
+    <p>En un proyecto nuevo definimos la estructura de cada tipo de contenido: qué información tiene, con qué se relaciona y qué metadatos lleva.</p>
+    <ul class="dots">
+      <li><b>Un artículo:</b> autor, categoría, título, imagen destacada…</li>
+      <li><b>Un producto:</b> precio, imágenes, filtros, accesorios, descripción…</li>
+    </ul>
+  </div>
+  <figure class="fig tall bare"><img class="dg" src="img/svg/modelo-producto.svg" alt="Diagrama del modelo de contenido de un producto: del producto salen flechas hacia marca, categoría de producto, imágenes, precio, descripción, facetas de búsqueda y accesorios y productos compatibles" width="800" height="620" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s qlist" id="recopilar">
+  <h3>Recopilar: qué preguntarse</h3>
+  <p class="src">A partir de la investigación con usuarios, el análisis de la competencia y la lluvia de ideas.</p>
+  <ul class="ql">
+    <li>¿Qué formato es el ideal? <span class="step">Para explicar cómo se monta un mueble, un vídeo corto funciona mejor que un texto largo.</span></li>
+    <li>¿Qué extensión tendrá? <span class="step">Una ficha de producto: 3 o 4 líneas y las especificaciones en una lista.</span></li>
+    <li>¿A qué audiencia va dirigido? <span class="step">En la web de la escuela: aspirantes, alumnado y profesorado necesitan información distinta.</span></li>
+    <li>¿Cuánto tiempo estará vigente? <span class="step">El horario de un curso caduca cada año; la historia de la escuela, no.</span></li>
+    <li>¿Cómo se actualizará? <span class="step">Las noticias las publica cada semana el equipo de comunicación desde el gestor de contenidos.</span></li>
+  </ul>
+</section>
+
+<section class="s cards">
+  <h3>Contenidos estructurados y no estructurados</h3>
+  <ol class="cardset">
+    <li><span><b>Estructurados</b>Se dividen en piezas bien definidas, como una ficha de producto. Permiten usar plantillas.</span></li>
+    <li><span><b>No estructurados</b>Su composición varía de uno a otro.</span></li>
+  </ol>
+</section>
+
+<section class="s sep" id="c4" data-short="Taxonomía" data-ribbon="categorías · subcategorías · etiquetas · relaciones" data-num="Capítulo 3">
+  <h2>Taxonomía web</h2>
+  <p class="lead">El sistema de clasificación, organización y etiquetado del contenido de una web o una app.</p>
+  <ul class="sub">
+    <li><a href="#taxonomia"><span class="im"><img class="dg" src="img/svg/taxonomia.svg" alt="" width="760" height="246" loading="lazy" decoding="async"></span><b>Qué define</b>Tipos, jerarquía, relaciones.</a></li>
+    <li><a href="#componentes-tax"><span class="im"><img src="img/menu-taxonomia.webp" alt="" width="1457" height="261" loading="lazy" decoding="async"></span><b>Componentes</b>Categorías, tags, navegación.</a></li>
+    <li><a href="#crear-tax"><span class="im"><img class="bw" src="img/cardsorting.webp" alt="" width="856" height="563" loading="lazy" decoding="async"></span><b>Cómo crearla</b>Paso a paso.</a></li>
+    <li><a href="#tags"><span class="im"><img src="img/tags.webp" alt="" width="839" height="852" loading="lazy" decoding="async"></span><b>Etiquetas (tags)</b>Clasificación más precisa.</a></li>
+  </ul>
+</section>
+
+<section class="s split" id="taxonomia">
+  <h3>Taxonomía</h3>
+  <div class="txt">
+    <p>Es un pilar de la arquitectura de la información. Ayuda a los usuarios a encontrar, comprender y recorrer la información, y mejora la usabilidad y la accesibilidad.</p>
+    <p>Define:</p>
+    <ul class="dots">
+      <li>Los tipos de contenido (páginas, productos, artículos…).</li>
+      <li>La estructura jerárquica.</li>
+      <li>Las relaciones entre las distintas piezas de contenido.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/taxonomia.svg" alt="Árbol de categorías de una tienda: inicio, ropa de hombre, ropa de mujer y sus subcategorías" width="760" height="246" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s figs">
+  <h3>La taxonomía como jerarquía de metadatos</h3>
+  <figure class="fig wide"><img src="img/taxonomia-metadatos.webp" alt="Lista de rutas de categorías del tipo Home, Electrodomésticos, Climatización, Ventiladores" width="1519" height="294" loading="lazy" decoding="async"><figcaption>Cada producto queda descrito por la ruta de categorías a la que pertenece.</figcaption></figure>
+</section>
+
+<section class="s cards">
+  <h3>Beneficios de una buena taxonomía</h3>
+  <ol class="cardset">
+    <li><span><b>Mejor experiencia</b>El usuario encuentra rápido lo que busca, con menos fricción y frustración.</span></li>
+    <li><span><b>Anticipación</b>Si entiende cómo se relacionan las categorías, sabe dónde buscar y cómo moverse.</span></li>
+    <li><span><b>Mejor SEO</b>Los buscadores entienden y clasifican mejor el contenido.</span></li>
+    <li><span><b>Un lenguaje común</b>Alinea los términos del sitio con los del usuario.</span></li>
+  </ol>
+</section>
+
+<section class="s cards" id="componentes-tax">
+  <h3>Componentes clave</h3>
+  <ol class="cardset">
+    <li><span><b>Categorías y subcategorías</b>Divisiones lógicas y jerárquicas: Electrónica › Teléfonos móviles › Accesorios.</span></li>
+    <li><span><b>Etiquetas (tags)</b>Palabras clave que permiten una clasificación múltiple o facetada: oferta, 5G, Android.</span></li>
+    <li><span><b>Sistemas de navegación</b>Menús, migas de pan y filtros que guían al usuario por la estructura.</span></li>
+  </ol>
+</section>
+
+<section class="s cards">
+  <h3>Las categorías deben ser…</h3>
+  <ol class="cardset">
+    <li><span><b>Mutuamente excluyentes</b>Claramente diferenciadas, sin solapamientos ni confusión.</span></li>
+    <li><span><b>Exhaustivas</b>Entre todas, completan el sistema que representan.</span></li>
+  </ol>
+</section>
+
+<section class="s process" id="crear-tax">
+  <h3>Pasos para crear una taxonomía</h3>
+  <ol class="flow">
+    <li><b>Reunir los conceptos</b>De la investigación con usuarios, los datos existentes, los expertos y los términos del negocio.</li>
+    <li><b>Inventariar</b>Hacer un inventario de contenidos detallado.</li>
+    <li><b>Buscar un estándar</b>Ver si existe una taxonomía del sector y adaptarla al contexto.</li>
+    <li><b>Crear reglas</b>Definir cómo se agrupan los contenidos.</li>
+    <li><b>Nombrar</b>Con términos que informen al usuario, no solo con la jerga del negocio.</li>
+    <li><b>Jerarquizar y relacionar</b>Fijar las relaciones padre-hijo y las relaciones entre categorías.</li>
+  </ol>
+</section>
+
+<section class="s split" id="tags">
+  <h3>Etiquetas y navegación</h3>
+  <div class="txt">
+    <p>Las etiquetas (tags) son palabras clave que complementan a las categorías y permiten una clasificación más precisa.</p>
+    <p>En la taxonomía buscamos la precisión lógica. Cuando se muestra como navegación, agrupamos según los modelos mentales del usuario.</p>
+    <p class="note">No hay que confundir la taxonomía con el sitemap. Permite la navegación facetada: aplicar varios filtros a la vez.</p>
+  </div>
+  <figure class="fig tall"><img src="img/tags.webp" alt="Artículo de blog titulado Qué son los tags, con sus etiquetas debajo: consejos, marketing, tips y trucos, WordPress" width="839" height="852" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s sep" id="c5" data-short="Clasificación" data-ribbon="alfabética · cronológica · temática · por tareas · por audiencia" data-num="Capítulo 4">
+  <h2>Sistemas de clasificación</h2>
+  <p class="lead">Los criterios para ordenar los contenidos. Pueden ser exactos o ambiguos.</p>
+  <ul class="sub">
+    <li><a href="#exactos"><span class="im"><img src="img/alfabetica.webp" alt="" width="1600" height="766" loading="lazy" decoding="async"></span><b>Exactos</b>Objetivos y conocidos.</a></li>
+    <li><a href="#ambiguos"><span class="im"><img src="img/tematica.webp" alt="" width="1600" height="764" loading="lazy" decoding="async"></span><b>Ambiguos</b>Subjetivos y más útiles.</a></li>
+    <li><a href="#incorrecta"><span class="im"><img src="img/empresa.webp" alt="" width="1533" height="900" loading="lazy" decoding="async"></span><b>Errores</b>Mezclar criterios.</a></li>
+    <li><a href="#cardsorting"><span class="im"><img class="bw" src="img/cardsorting.webp" alt="" width="856" height="563" loading="lazy" decoding="async"></span><b>Card sorting</b>Preguntar al usuario.</a></li>
+  </ul>
+</section>
+
+<section class="s cards" id="exactos">
+  <h3>Exactos y ambiguos</h3>
+  <ol class="cardset">
+    <li><span><b>Exactos (objetivos)</b>Útiles cuando el usuario busca algo que ya conoce. Alfabética, cronológica, geográfica y numérica.</span></li>
+    <li class="f"><span><b>Ambiguos (subjetivos)</b>Para explorar o buscar con criterios personales. Parecen imprecisos, pero suelen ser más útiles: temática, lineal, por tareas, por audiencia, metafórica, por empresa e híbrida.</span></li>
+  </ol>
+</section>
+
+<section class="s split">
+  <h3>Alfabética</h3>
+  <div class="txt"><p>Por nombre, título, apellido, producto, servicio o departamento. Es la de enciclopedias, diccionarios y directorios.</p></div>
+  <figure class="fig"><img src="img/alfabetica.webp" alt="Página de libros de Amazon con categorías y autores" width="1600" height="766" loading="lazy" decoding="async"><figcaption>Amazon.es</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Cronológica</h3>
+  <div class="txt">
+    <p>Según cuándo ocurrió: fecha de publicación, acontecimientos históricos, programación de televisión.</p>
+    <p class="note">El timeline de una red social usa el orden cronológico inverso: lo más reciente, primero.</p>
+  </div>
+  <figure class="fig"><img src="img/cronologica.webp" alt="Guía de programación de Movistar Plus ordenada por horas" width="1600" height="733" loading="lazy" decoding="async"><figcaption>Movistar Plus+</figcaption></figure>
+</section>
+
+<section class="s cards">
+  <h3>Geográfica y numérica</h3>
+  <ol class="cardset">
+    <li><span><b>Geográfica</b>Según el lugar con el que se relaciona cada contenido.</span></li>
+    <li><span><b>Numérica</b>Por posición, por valor, en orden ascendente o descendente: precios, descuentos, tallas, rankings, prioridades.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="ambiguos">
+  <h3>Temática o por categorías</h3>
+  <div class="txt"><p>Según las materias o áreas de conocimiento. Se adapta al dominio del producto: en un comercio electrónico, son los tipos de producto.</p></div>
+  <figure class="fig"><img src="img/tematica.webp" alt="Página de inicio de la tienda de Mango con su menú de categorías" width="1600" height="764" loading="lazy" decoding="async"><figcaption>Mango</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Lineal</h3>
+  <div class="txt">
+    <p>La información se presenta en secuencia, a medida que el usuario avanza o hace scroll. Muy presente en móviles y redes sociales.</p>
+    <p>Necesita una forma de volver a una sección sin deshacer todo el scroll.</p>
+  </div>
+  <figure class="fig tall"><img src="img/lineal-bluesky.webp" alt="Perfil de Bluesky con las publicaciones una debajo de otra" width="1000" height="1325" loading="lazy" decoding="async"><figcaption>Bluesky: publicaciones en secuencia, de la más reciente a la más antigua.</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Orientada a tareas</h3>
+  <div class="txt"><p>La información se ordena según el paso de la tarea al que pertenece. Reservar un vuelo, comprar un billete o pagar son ejemplos claros.</p></div>
+  <figure class="fig"><img src="img/tareas.webp" alt="Buscador de billetes de Renfe con origen, destino y fechas" width="1455" height="521" loading="lazy" decoding="async"><figcaption>Renfe</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Orientada a la audiencia</h3>
+  <div class="txt"><p>Crea secciones para cada grupo de usuarios, con la información que le interesa. Funciona bien cuando un tipo de usuario vuelve a menudo para lo mismo.</p></div>
+  <figure class="fig"><img src="img/audiencia.webp" alt="Sección de educación de la Biblioteca Pública de Nueva York con apartados para niños, adolescentes y adultos" width="1600" height="828" loading="lazy" decoding="async"><figcaption>Biblioteca Pública de Nueva York</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Metafórica</h3>
+  <div class="txt"><p>Explica el contenido mediante algo que la audiencia reconoce fácilmente. La metáfora tiene que entenderla todo el público, no solo unos pocos.</p></div>
+  <figure class="fig"><img src="img/metaforica.webp" alt="Barra de categorías con iconos que representan tipos de alojamiento" width="1600" height="298" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Por empresa</h3>
+  <div class="txt">
+    <p>Sigue la estructura interna de la institución: departamentos o áreas de negocio.</p>
+    <p class="note">Se desaconseja: el usuario no tiene por qué conocer esa estructura. Solo tiene sentido para un público especializado.</p>
+  </div>
+  <figure class="fig"><img src="img/empresa.webp" alt="Campus virtual de la Universidad de Málaga con el menú organizado por servicios internos" width="1533" height="900" loading="lazy" decoding="async"><figcaption>Campus virtual de la Universidad de Málaga</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Híbrida</h3>
+  <div class="txt"><p>Casi nunca encontramos un tipo puro. Lo normal es combinar varios, desde el principio o a medida que se profundiza en la estructura.</p></div>
+  <figure class="fig"><img src="img/hibrida.webp" alt="Categorías destacadas de una librería online, cada una con un icono" width="1596" height="797" loading="lazy" decoding="async"><figcaption>Por categorías y metafórica a la vez.</figcaption></figure>
+</section>
+
+<section class="s split" id="incorrecta">
+  <h3>Una clasificación incorrecta</h3>
+  <div class="txt">
+    <p>Mezclar varios criterios en un mismo nivel desorienta al usuario.</p>
+    <p class="note">¿Qué criterio sigue cada opción de este menú?</p>
+  </div>
+  <ul class="menu-ex">
+    <li>Tutores <em class="step">audiencia</em></li>
+    <li>Alumnos <em class="step">audiencia</em></li>
+    <li>Obtener clave de acceso <em class="step">tarea</em></li>
+    <li>Secretaría <em class="step">metafórica</em></li>
+    <li>Administradores <em class="step">audiencia</em></li>
+    <li>Tecnología y web <em class="step">temática</em></li>
+    <li>Formación virtual <em class="step">temática</em></li>
+    <li>Realizar matrícula <em class="step">tarea</em></li>
+  </ul>
+</section>
+
+<section class="s split" id="cardsorting">
+  <h3>Card sorting</h3>
+  <div class="txt">
+    <p>Técnica para descubrir cómo agrupan las personas la información. Es fácil, barata y detecta los términos confusos.</p>
+    <ul class="dots">
+      <li>Cada elemento se escribe en una tarjeta.</li>
+      <li>Cada participante agrupa las tarjetas como le parece y pone nombre a los grupos.</li>
+      <li>Se comparan los resultados. Si no hay consenso, se renombra el elemento o se incluye en más de una categoría.</li>
+    </ul>
+  </div>
+  <figure class="fig photo"><img class="bw" src="img/cardsorting.webp" alt="Tarjetas de papel agrupadas en columnas sobre una mesa de madera" width="856" height="563" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s cards">
+  <h3>Card sorting: claves</h3>
+  <ol class="cardset">
+    <li><span><b>Participantes</b>Representativos de los usuarios, al menos seis, y cada uno por separado para evitar el sesgo del consenso.</span></li>
+    <li><span><b>Abierto</b>Los participantes ponen nombre a los grupos.</span></li>
+    <li><span><b>Cerrado</b>Los nombres de los grupos ya vienen dados.</span></li>
+    <li><span><b>Herramientas</b>En línea, por ejemplo <a href="https://www.optimalworkshop.com/optimalsort">OptimalSort</a>.</span></li>
+  </ol>
+</section>
+
+<section class="s sep" id="c6" data-short="Estructuras" data-ribbon="jerárquica · secuencial · matricial · combinada" data-num="Capítulo 5">
+  <h2>Estructuras de organización</h2>
+  <p class="lead">Cómo se relacionan los contenidos. Una buena estructura permite al usuario predecir dónde encontrará la información.</p>
+  <ul class="sub">
+    <li><a href="#jerarquica"><span class="im"><img class="dg" src="img/svg/jerarquica.svg" alt="" width="600" height="330" loading="lazy" decoding="async"></span><b>Jerárquica</b>De lo general a lo específico.</a></li>
+    <li><a href="#secuencial"><span class="im"><img class="dg" src="img/svg/secuencial.svg" alt="" width="760" height="190" loading="lazy" decoding="async"></span><b>Secuencial</b>Paso a paso.</a></li>
+    <li><a href="#matricial"><span class="im"><img class="dg" src="img/svg/matricial.svg" alt="" width="600" height="330" loading="lazy" decoding="async"></span><b>Matricial</b>En red.</a></li>
+    <li><a href="#catalogo"><span class="im"><img src="img/catalogo.webp" alt="" width="1342" height="493" loading="lazy" decoding="async"></span><b>Catálogo</b>Desde los metadatos.</a></li>
+  </ul>
+</section>
+
+<section class="s split">
+  <h3>Estructura organizativa</h3>
+  <div class="txt">
+    <p>Es la forma de definir las relaciones entre los contenidos. Debe ser coherente con el usuario: sus expectativas, sus conocimientos y sus experiencias previas.</p>
+    <p>Las tres principales son la jerárquica, la secuencial y la matricial.</p>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/comparativa-estructuras.svg" alt="Gráfico que sitúa la estructura secuencial, la jerárquica y la web enlazada según la complejidad del contenido y de la audiencia" width="760" height="340" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split" id="jerarquica">
+  <h3>Estructura jerárquica</h3>
+  <div class="txt">
+    <p>Sigue un modelo de arriba abajo (top-down): de lo general a lo específico, como un árbol genealógico.</p>
+    <p>Organiza la información en grupos y subgrupos, de elementos padre a elementos hijo.</p>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/jerarquica.svg" alt="Esquema de una estructura jerárquica en árbol" width="600" height="330" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Jerarquía amplia o profunda</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li><b>Amplia:</b> muchos elementos en el primer nivel y pocos niveles.</li>
+      <li><b>Profunda:</b> pocos elementos en el primer nivel y muchos niveles.</li>
+    </ul>
+    <p class="note">Hay que buscar el equilibrio entre amplitud y profundidad.</p>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/amplia-profunda.svg" alt="Comparación entre una estructura simple en estrella y una jerarquía más compleja de varios niveles" width="760" height="330" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s cards ap">
+  <h3>Amplitud y profundidad</h3>
+  <div class="keys">
+    <div><div class="key"><b>7 ± 2</b><span>opciones como límite en un mismo nivel</span></div><p>Con más de diez opciones en el menú principal, el usuario se siente abrumado. Demasiadas opciones arriba y poco contenido debajo decepcionan.</p></div>
+    <div><div class="key"><b>3 clics</b><span>como máximo desde la página de inicio</span></div><p>Con más de cuatro o cinco niveles, el usuario se rinde. Si no se puede cumplir, los menús más amplios van en el primer nivel.</p></div>
+  </div>
+</section>
+
+<section class="s cards">
+  <h3>Jerarquías estrictas y polijerarquías</h3>
+  <ol class="cardset">
+    <li><span><b>Estricta</b>Un elemento solo puede pertenecer a una categoría padre.</span></li>
+    <li><span><b>Polijerarquía</b>Un elemento puede colgar de varias categorías padre.</span></li>
+  </ol>
+  <p class="foot">Las categorías deben ser excluyentes. Puede haber excepciones, pero demasiadas confunden.</p>
+</section>
+
+<section class="s cards">
+  <h3>Cuándo usar una estructura jerárquica</h3>
+  <ol class="cardset">
+    <li><span><b>Mucho contenido</b>Es muy adecuada para grandes volúmenes.</span></li>
+    <li><span><b>Webs institucionales</b>Y corporativas, donde importa el orden de acceso.</span></li>
+    <li><span><b>Orientación</b>El usuario sabe siempre en qué nivel está.</span></li>
+  </ol>
+</section>
+
+<section class="s q">
+  <h3>¿Qué es más escalable, una jerarquía amplia o una profunda?</h3>
+  <div class="answer step"><p><b>La amplia y poco profunda.</b> Tiene más categorías generales donde incluir contenidos nuevos sin reestructurarlo todo. Escalabilidad es la capacidad de un sistema de crecer de forma eficiente.</p></div>
+</section>
+
+<section class="s split" id="secuencial">
+  <h3>Estructura secuencial</h3>
+  <div class="txt">
+    <p>Marca un camino paso a paso. Presupone que hay un orden óptimo de los contenidos.</p>
+    <p>Su rigidez, y la dificultad para adelantar o retroceder, pueden hacer la navegación lenta y tediosa.</p>
+    <p class="note">Se usa en tutoriales y en procesos de compra.</p>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/secuencial.svg" alt="Secuencia lineal de pantallas unidas por flechas" width="760" height="190" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Tipos de estructura secuencial</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li><b>Lineal simple:</b> todo en un orden cerrado, como un libro.</li>
+      <li><b>Lineal con digresiones:</b> una secuencia principal con desvíos para contenido adicional que vuelven al flujo, como las lecciones de un curso online.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/lineal-tipos.svg" alt="Dos esquemas: una secuencia lineal recta y otra con ramas de contenido adicional" width="760" height="320" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Cómo suavizar una estructura secuencial</h3>
+  <div class="txt">
+    <p>Para evitar la frustración, se combina con tres tipos de enlace:</p>
+    <ul class="dots">
+      <li><b>De vecindad:</b> para moverse entre elementos del mismo nivel.</li>
+      <li><b>De retorno:</b> para volver a pantallas anteriores.</li>
+      <li><b>De índice:</b> para saltar a una información concreta.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img src="img/enlaces-secuencia.webp" alt="Página de la Universidad de Málaga con los enlaces de índice y de vecindad señalados" width="1175" height="654" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split" id="matricial">
+  <h3>Estructura matricial</h3>
+  <div class="txt">
+    <p>También llamada en red o hipertexto. Los contenidos se conectan entre sí sin seguir un único camino.</p>
+    <ul class="dots">
+      <li>Sin orden aparente y con poca o ninguna jerarquía.</li>
+      <li>Navegación muy libre y muchos enlaces dentro del contenido.</li>
+      <li>Puede desorientar al usuario.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img class="dg" src="img/svg/matricial.svg" alt="Esquema de documentos conectados entre sí en red" width="600" height="330" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Usos de la estructura matricial</h3>
+  <div class="txt">
+    <p>Juegos, proyectos experimentales y medios digitales.</p>
+    <p class="note">No suele ser buena como estructura principal: funciona mejor como complemento de una jerárquica.</p>
+  </div>
+  <figure class="fig"><img src="img/wikipedia.webp" alt="Página de portada de Wikipedia llena de enlaces" width="1547" height="872" loading="lazy" decoding="async"><figcaption>Wikipedia</figcaption></figure>
+</section>
+
+<section class="s cards">
+  <h3>Recomendaciones para una estructura en red</h3>
+  <ol class="cardset">
+    <li><span><b>Temas conectados</b>Agrupa los contenidos en bloques que se enlacen con lógica.</span></li>
+    <li><span><b>Pocos enlaces</b>Solo los necesarios: claros y relevantes.</span></li>
+    <li><span><b>Orientación</b>Menú fijo, buscador o migas de pan para no perderse.</span></li>
+    <li><span><b>Coherencia</b>Diseño y navegación consistentes para crecer sin desorden.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="catalogo">
+  <h3>Modelo de base de datos o catálogo</h3>
+  <div class="txt">
+    <p>Variante ascendente (bottom-up) que se apoya en los metadatos. Permite filtrar y buscar, y enlazar información relacionada.</p>
+    <p>Todos los elementos comparten las mismas piezas: nombre, descripción, marca, etiquetas, foto, existencias, precio…</p>
+    <p class="note">Para colecciones homogéneas, como un catálogo de productos.</p>
+  </div>
+  <figure class="fig"><img src="img/catalogo.webp" alt="Ficha de un libro en Amazon con portada, precio, formatos y valoraciones" width="1342" height="493" loading="lazy" decoding="async"><figcaption>Amazon.es</figcaption></figure>
+</section>
+
+<section class="s state" data-title="Esquemas combinados">
+  <h3 class="sr">Esquemas combinados</h3>
+  <p class="big">Lo habitual es combinar: una jerarquía para los primeros niveles y un catálogo para el detalle.</p>
+  <p class="lead">Es el patrón más frecuente en la web, sobre todo en el comercio electrónico. Arriba, las categorías; abajo, los productos.</p>
+  <figure class="ph"><img src="img/pag-filtros.webp" alt="Listado de productos de una tienda online con filtros por categoría a la izquierda" width="1261" height="799" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s sep" id="c7" data-short="Navegación" data-ribbon="global · contextual · migas de pan · fat footer" data-num="Capítulo 6">
+  <h2>Navegación</h2>
+  <p class="lead">Los componentes que muestran al usuario dónde está, qué puede hacer y adónde puede ir.</p>
+  <ul class="sub">
+    <li><a href="#nav-global"><span class="im"><img src="img/nav-global.webp" alt="" width="1478" height="599" loading="lazy" decoding="async"></span><b>Global</b>En todas las pantallas.</a></li>
+    <li><a href="#nav-contextual"><span class="im"><img src="img/nav-contextual.webp" alt="" width="715" height="757" loading="lazy" decoding="async"></span><b>Contextual</b>En una zona concreta.</a></li>
+    <li><a href="#nav-componentes"><span class="im"><img src="img/nav-componentes.webp" alt="" width="977" height="1600" loading="lazy" decoding="async"></span><b>Componentes</b>Y decisiones.</a></li>
+    <li><a href="#orientacion"><span class="im"><img src="img/fat-footer.webp" alt="" width="1600" height="916" loading="lazy" decoding="async"></span><b>Orientación</b>Que nadie se pierda.</a></li>
+  </ul>
+</section>
+
+<section class="s split">
+  <h3>Elementos de navegación</h3>
+  <div class="txt"><p>Componentes de la interfaz (menús, enlaces, migas de pan, acordeones…) que muestran al usuario qué pantalla está viendo, qué puede hacer y adónde puede ir.</p></div>
+  <figure class="fig"><img src="img/nav-elementos.webp" alt="Tres pantallas de una app con menú lateral y pestañas" width="752" height="564" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split" id="nav-global">
+  <h3>Navegación global</h3>
+  <div class="txt">
+    <p>Está disponible en todas las pantallas: el logotipo que lleva al inicio, el menú principal, la ayuda, el inicio de sesión…</p>
+    <p>Permite moverse por la estructura de forma no lineal.</p>
+  </div>
+  <figure class="fig"><img src="img/nav-global.webp" alt="Cabecera de El País con el logotipo y el menú principal de secciones" width="1478" height="599" loading="lazy" decoding="async"><figcaption>El País</figcaption></figure>
+</section>
+
+<section class="s split" id="nav-contextual">
+  <h3>Navegación contextual</h3>
+  <div class="txt">
+    <p>Solo aparece en una zona concreta o en la pantalla de un tema. Permite explorar un contenido específico, como durante la instalación de un programa.</p>
+    <p>También son contextuales los menús secundarios y los que aparecen al seleccionar un elemento.</p>
+    <p class="note">El sitemap ayuda a decidir qué pantallas se enlazan con navegación global y cuáles con contextual.</p>
+  </div>
+  <figure class="fig tall"><img src="img/nav-contextual.webp" alt="Panel de propiedades de Figma que cambia según el elemento seleccionado" width="715" height="757" loading="lazy" decoding="async"><figcaption>Figma</figcaption></figure>
+</section>
+
+<section class="s figs" data-title="Ejercicio">
+  <h3>¿Qué elementos son de navegación global y cuáles de navegación contextual?</h3>
+  <figure class="fig wide"><img src="img/nav-ejercicio.webp" alt="Página de resultados de IKEA con menú superior, filtros y listado de productos" width="1375" height="866" loading="lazy" decoding="async"><figcaption>IKEA</figcaption></figure>
+</section>
+
+<section class="s cards">
+  <h3>Jerarquía visual de la navegación</h3>
+  <ol class="cardset">
+    <li><span><b>Por importancia</b>Define una jerarquía visual según la importancia de cada elemento.</span></li>
+    <li><span><b>Distinguible</b>El usuario debe diferenciar la navegación del contenido y de las demás opciones interactivas.</span></li>
+    <li><span><b>Variable</b>Puede cambiar según la pantalla, pero siempre aclara qué es interactivo.</span></li>
+  </ol>
+  <p class="foot">Recuerda: hay tres estructuras básicas (jerárquica, lineal y en red), y lo normal es combinarlas.</p>
+</section>
+
+<section class="s split" id="nav-componentes">
+  <h3>Componentes de navegación principales</h3>
+  <div class="txt">
+    <ol class="nums">
+      <li>Herramientas o utilidades.</li>
+      <li>Navegación global (menú principal).</li>
+      <li>Migas de pan (breadcrumbs).</li>
+      <li>Navegación contextual o local.</li>
+      <li>Enlaces relacionados, dentro o fuera del contenido.</li>
+      <li>Fat footer: casi un mapa de navegación.</li>
+    </ol>
+  </div>
+  <figure class="fig tall"><img src="img/nav-componentes.webp" alt="Página web con seis zonas de navegación numeradas y recuadradas en rojo" width="977" height="1600" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s cards">
+  <h3>Decisiones sobre cada componente</h3>
+  <ol class="cardset">
+    <li><span><b>Prioridad de uso</b>¿Cuánto lo usarán? ¿Navegan sobre todo con la navegación local o con los enlaces relacionados?</span></li>
+    <li><span><b>Ubicación</b>¿En qué pantallas debe estar? ¿Arriba, a la izquierda, a la derecha, abajo?</span></li>
+    <li><span><b>Patrón</b>¿Qué patrón favorece la búsqueda y el descubrimiento: pestañas, megamenú, carrusel, acordeón…?</span></li>
+  </ol>
+</section>
+
+<section class="s rows-s" id="orientacion">
+  <h3>Cómo mantener al usuario orientado</h3>
+  <dl class="tworow">
+    <div><dt>Coherencia visual</dt><dd>Misma estructura, color, tipografía y logotipo en todas las pantallas.</dd></div>
+    <div><dt>Jerarquía visual</dt><dd>Arriba a la izquierda, lo más importante. Nunca dos menús en zonas equivalentes.</dd></div>
+    <div><dt>Migas de pan</dt><dd>Dicen dónde está y de dónde viene: Inicio › Sección › Subsección.</dd></div>
+    <div><dt>Enlaces visitados</dt><dd>De un color distinto al de los enlaces sin visitar.</dd></div>
+    <div><dt>Sin redundancia</dt><dd>Dos opciones que hacen lo mismo hacen dudar.</dd></div>
+    <div><dt>Mapa del sitio</dt><dd>Da una visión global y ayuda a reorientarse.</dd></div>
+  </dl>
+</section>
+
+<section class="s sep" id="c8" data-short="Etiquetado" data-ribbon="claras · previsibles · consistentes · en el idioma del usuario" data-num="Capítulo 7">
+  <h2>Etiquetado o rotulación</h2>
+  <p class="lead">Las palabras son la cara visible de toda la organización.</p>
+  <ul class="sub">
+    <li><a href="#etiqueta"><span class="im"><img src="img/etiquetas-mas.webp" alt="" width="1600" height="785" loading="lazy" decoding="async"></span><b>La etiqueta</b>Y el lenguaje.</a></li>
+    <li><a href="#tipos-etiqueta"><span class="im"><img class="dg" src="img/svg/iconos-fila.svg" alt="" width="168" height="28" loading="lazy" decoding="async"></span><b>Tipos</b>Enlaces, cabeceras, iconos…</a></li>
+    <li><a href="#recomendaciones"><span class="im"><img src="img/menu-taxonomia.webp" alt="" width="1457" height="261" loading="lazy" decoding="async"></span><b>Recomendaciones</b>Y qué evitar.</a></li>
+  </ul>
+</section>
+
+<section class="s split" id="etiqueta">
+  <h3>La etiqueta</h3>
+  <div class="txt">
+    <p class="lead">Es el texto de un elemento interactivo.</p>
+    <p>Transmite la organización, la navegación y el tono del producto, y también los valores y la imagen de la marca.</p>
+    <p>Es etiqueta todo lo que describe una porción de contenido: enlaces, cabeceras, iconos…</p>
+  </div>
+  <figure class="fig"><img src="img/etiquetas-mas.webp" alt="Web de supermercados MAS con un menú lateral de categorías desplegables" width="1600" height="785" loading="lazy" decoding="async"><figcaption>Supermercados MAS: las etiquetas no dejan dudas sobre el destino.</figcaption></figure>
+</section>
+
+<section class="s state" data-title="Las etiquetas y el lenguaje">
+  <h3 class="sr">Las etiquetas y el lenguaje</h3>
+  <p class="big">El usuario llega con una idea y unas palabras en la cabeza.</p>
+  <p class="lead">Hace clic en lo que encaja con su idea. Si no lo encuentra, busca algo parecido. Si tampoco, se va. Por eso las etiquetas deben adaptarse a lo que el usuario espera.</p>
+  <figure class="ph"><img class="bw" src="img/libro-manos.webp" alt="Manos que hojean un libro abierto sobre una mesa" width="1125" height="750" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s q">
+  <h3>¿Cómo se llama este patrón de comportamiento?</h3>
+  <div class="answer step"><p><b>Satisficing</b> (de satisfy y suffice): elegir la primera opción que parece suficientemente buena.</p></div>
+</section>
+
+<section class="s cards">
+  <h3>Dos principios</h3>
+  <ol class="cardset">
+    <li><span><b>Contenido innovador, etiquetas obvias</b>Aunque el contenido sea original, las etiquetas deben ser previsibles, para que no haya dudas sobre lo que representan.</span></li>
+    <li><span><b>Etiquetas con vida larga</b>Deben adaptarse bien, aunque cambiarán cuando cambien los contenidos o se reagrupen.</span></li>
+  </ol>
+</section>
+
+<section class="s rows-s" id="tipos-etiqueta">
+  <h3>Tipos de etiquetas</h3>
+  <dl class="tworow">
+    <div><dt>Enlaces contextuales</dt><dd>Hipervínculos dentro del texto. Las palabras no significan lo mismo para todos y el texto que las rodea puede confundir: deben ser directos y significativos.</dd></div>
+    <div><dt>De cabecera</dt><dd>Anuncian el contenido de una sección; tipografía y color indican su jerarquía. Términos habituales: Inicio, Contacto, Quiénes somos…</dd></div>
+    <div><dt>De navegación</dt><dd>Pocas opciones presentes en casi todas las pantallas: exigen diseño y consistencia.</dd></div>
+    <div><dt>De índice</dt><dd>Una alternativa a la búsqueda libre, como un índice alfabético.</dd></div>
+    <div><dt>Iconos</dt><dd>Representan el contenido de forma figurada. Mejor siempre acompañados de texto.</dd></div>
+  </dl>
+</section>
+
+<section class="s figs">
+  <h3>Iconos: convenciones</h3>
+  <figure class="fig wide icons"><ul class="iconrow"><li><img src="img/svg/icono-usuario.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Usuario</span></li><li><img src="img/svg/icono-idioma.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Idioma</span></li><li><img src="img/svg/icono-inicio-lila.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Inicio</span></li><li><img src="img/svg/icono-telefono.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Teléfono</span></li><li><img src="img/svg/icono-correo.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Correo</span></li><li><img src="img/svg/icono-ubicacion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Ubicación</span></li><li><img src="img/svg/icono-busqueda-lila.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Búsqueda</span></li><li><img src="img/svg/icono-informacion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Información</span></li><li><img src="img/svg/icono-editar.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Editar</span></li><li><img src="img/svg/icono-ajustes.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Ajustes</span></li><li><img src="img/svg/icono-ayuda.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Ayuda</span></li></ul><figcaption>No hay un estándar, pero sí convenciones: inicio, correo, búsqueda, ajustes… Acompáñalos de texto para asegurar que se entienden.</figcaption></figure>
+</section>
+
+<section class="s pairs" id="recomendaciones">
+  <h3>Recomendaciones para etiquetar</h3>
+  <ol class="pl">
+    <li><b>Lenguaje del usuario</b>Que reconozca al momento la función de cada opción y adónde le lleva.</li>
+    <li><b>Sin clickbait</b>Ni demasiado genérico ni un texto que engañe: la decepción arruina la experiencia.</li>
+    <li><b>Claridad</b>Tantas palabras como hagan falta, concretas, y con significado propio.</li>
+    <li><b>Avisos</b>Si hace falta registrarse o se sale de la página, dilo. Si el destino es obvio, no.</li>
+    <li><b>Información emergente</b>Los tooltips sobre el destino del enlace son muy útiles.</li>
+  </ol>
+</section>
+
+<section class="s dodont">
+  <h3>Más recomendaciones y qué evitar</h3>
+  <div class="dd">
+    <div><p class="dd-h">Haz</p><ul class="dots">
+      <li><b>Consistencia:</b> mismo término, tono y aspecto en todas sus apariciones.</li>
+      <li><b>Uso cotidiano:</b> los términos más cercanos para tu audiencia, siempre que sean correctos.</li>
+      <li><b>Corrección:</b> evita términos incorrectos aunque los usuarios los usen.</li>
+      <li><b>Un solo enlace:</b> no repitas el mismo enlace cada vez que aparece la palabra.</li>
+    </ul></div>
+    <div><p class="dd-h">Evita</p><ul class="dots">
+      <li><b>Dobles sentidos:</b> la ambigüedad semántica.</li>
+      <li><b>Arbitrariedad:</b> términos con un significado distinto del habitual.</li>
+      <li><b>Etiquetas vacías:</b> las que no informan del contenido.</li>
+      <li><b>Solapamientos:</b> etiquetas que no son excluyentes entre sí.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="s sep" id="c9" data-short="Tipos de página" data-ribbon="navegación · consumo · interacción · mixtas" data-num="Capítulo 8">
+  <h2>Tipología de páginas</h2>
+  <p class="lead">Cada pantalla tiene una función principal, aunque combine varias.</p>
+  <ul class="sub">
+    <li><a href="#pag-navegacion"><span class="im"><img src="img/pag-resultados.webp" alt="" width="1061" height="817" loading="lazy" decoding="async"></span><b>De navegación</b>Llevan a otro sitio.</a></li>
+    <li><a href="#pag-consumo"><span class="im"><img src="img/pag-articulo.webp" alt="" width="500" height="897" loading="lazy" decoding="async"></span><b>De consumo</b>Se lee, se ve, se escucha.</a></li>
+    <li><a href="#pag-interaccion"><span class="im"><img src="img/pag-google.webp" alt="" width="1006" height="604" loading="lazy" decoding="async"></span><b>De interacción</b>Se introducen datos.</a></li>
+    <li><a href="#pag-mixtas"><span class="im"><img src="img/pag-maps.webp" alt="" width="1468" height="772" loading="lazy" decoding="async"></span><b>Mixtas</b>Y cómo agrupar tareas.</a></li>
+  </ul>
+</section>
+
+<section class="s cards">
+  <h3>Objetivos de una página</h3>
+  <ol class="cardset">
+    <li><span><b>Mostrar información</b>Muchas cosas de forma somera, o una sola en detalle.</span></li>
+    <li><span><b>Facilitar una tarea</b>O procesar información.</span></li>
+    <li><span><b>Crear</b>Ofrecer herramientas para crear algo.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="pag-navegacion">
+  <h3>Páginas de navegación</h3>
+  <div class="txt">
+    <p>Ayudan a decidir dónde está la información y cómo llegar. Son páginas de paso:</p>
+    <ul class="dots">
+      <li>Inicio.</li>
+      <li>Listas de resultados o de registros, tablas de datos.</li>
+      <li>Galerías de miniaturas.</li>
+      <li>Tarjetas, árboles de navegación, paneles o acordeones.</li>
+    </ul>
+    <p class="note">Deben favorecer su propio abandono: llevar al siguiente paso.</p>
+  </div>
+  <figure class="fig"><img src="img/pag-resultados.webp" alt="Página de resultados de Google para la búsqueda contenido" width="1061" height="817" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Páginas de navegación: qué considerar</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li>Cuántos resultados hay que mostrar y cuánto espacio hay.</li>
+      <li>Si existe alguna jerarquía, y de qué tipo.</li>
+      <li>Cómo se ordenan y si el usuario puede cambiar el orden.</li>
+      <li>Cómo se busca y si el usuario puede filtrar.</li>
+      <li>Qué información u operaciones tiene cada elemento, y cuándo mostrarlas.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img src="img/pag-filtros.webp" alt="Listado de auriculares en una tienda online con filtros en la columna izquierda" width="1261" height="799" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Destacado, búsqueda y lista</h3>
+  <div class="txt">
+    <p>Muchas portadas combinan tres elementos:</p>
+    <ul class="dots">
+      <li><b>Un elemento destacado</b> (producto, noticia, artículo) para atraer al usuario.</li>
+      <li><b>Una caja de búsqueda</b> para quien sabe lo que busca.</li>
+      <li><b>Una lista</b> de elementos o categorías para explorar.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img src="img/pag-diario.webp" alt="Portada del Diario de Sevilla con noticia destacada, buscador y secciones" width="1163" height="762" loading="lazy" decoding="async"><figcaption>Diario de Sevilla</figcaption></figure>
+</section>
+
+<section class="s gal">
+  <h3>Tres portadas, tres prioridades</h3>
+  <div class="g">
+    <figure><img src="img/pag-sheknows.webp" alt="Portada de SheKnows con artículos destacados" width="552" height="938" loading="lazy" decoding="async"><figcaption>Centrada en el contenido: SheKnows destaca sus artículos.</figcaption></figure>
+    <figure><img src="img/pag-vueling.webp" alt="Portada de Vueling con el buscador de vuelos arriba" width="818" height="926" loading="lazy" decoding="async"><figcaption>Centrada en una tarea: Vueling pone primero la búsqueda, luego un destacado y tarjetas.</figcaption></figure>
+    <figure><img src="img/pag-mediamarkt.webp" alt="Portada de MediaMarkt con una gran caja de búsqueda y promociones" width="538" height="894" loading="lazy" decoding="async"><figcaption>Centrada en el comercio: MediaMarkt destaca la búsqueda y los filtros.</figcaption></figure>
+  </div>
+</section>
+
+<section class="s split" id="pag-consumo">
+  <h3>Páginas de consumo de contenidos</h3>
+  <div class="txt">
+    <p>Son el destino: aquí se leen los artículos, se ven los vídeos y se escucha la música.</p>
+    <p>Deben favorecer que la información se vea, se interprete y se procese bien.</p>
+  </div>
+  <figure class="fig tall"><img src="img/pag-articulo.webp" alt="Artículo de El País en un móvil, con titular, foto y texto" width="500" height="897" loading="lazy" decoding="async"><figcaption>El País</figcaption></figure>
+</section>
+
+<section class="s gal two">
+  <h3>Consumo: fichas de producto</h3>
+  <div class="g">
+    <figure><img src="img/pag-producto.webp" alt="Ficha de producto de MediaMarkt con fotos, precio y botón de compra" width="1209" height="769" loading="lazy" decoding="async"><figcaption>Ficha de MediaMarkt: fotos, precio y botón de compra.</figcaption></figure>
+    <figure><img src="img/pag-producto-2.webp" alt="Ficha de producto con la descripción técnica y productos alternativos" width="1041" height="794" loading="lazy" decoding="async"><figcaption>Debajo, la descripción técnica y productos alternativos para comparar.</figcaption></figure>
+  </div>
+</section>
+
+<section class="s split" id="pag-interaccion">
+  <h3>Páginas de interacción</h3>
+  <div class="txt">
+    <p>El usuario introduce o manipula datos: escribe, dibuja, edita, borra…</p>
+    <p>Pueden ser muy simples, como la portada de Google, o muy complejas, con muchos elementos de interacción. Las complejas exigen más tiempo para familiarizarse.</p>
+  </div>
+  <figure class="fig"><img src="img/pag-google.webp" alt="Página de inicio de Google con la caja de búsqueda" width="1006" height="604" loading="lazy" decoding="async"><figcaption>Google</figcaption></figure>
+</section>
+
+<section class="s split" id="pag-mixtas">
+  <h3>Páginas mixtas</h3>
+  <div class="txt">
+    <p>La mayoría de páginas combinan varios tipos, pero siempre predomina uno: la función principal de la página.</p>
+    <p class="note">Google Maps combina interacción y consumo; predomina el consumo, porque el mapa está para verlo.</p>
+  </div>
+  <figure class="fig"><img src="img/pag-maps.webp" alt="Google Maps con un panel de búsqueda a la izquierda y el mapa de una ciudad" width="1468" height="772" loading="lazy" decoding="async"><figcaption>Google Maps</figcaption></figure>
+</section>
+
+<section class="s split">
+  <h3>Agrupar tareas y subtareas</h3>
+  <div class="txt">
+    <p>Una página puede dedicarse a una tarea principal y agrupar sus subtareas o tareas relacionadas.</p>
+    <p>A veces una tarea es tan pequeña que no merece una página propia y se suma a otra.</p>
+  </div>
+  <figure class="fig"><img src="img/pag-amazon.webp" alt="Ficha de producto de Amazon que reúne compra, opciones de envío y productos relacionados en la misma página" width="1173" height="866" loading="lazy" decoding="async"><figcaption>Amazon</figcaption></figure>
+</section>
+
+<section class="s cards">
+  <h3>Cómo agrupar y cuánto espacio dedicar</h3>
+  <ol class="cardset">
+    <li><span><b>Experiencia del usuario</b>El experto procesa más información en una página; el novato agradece recibirla por partes.</span></li>
+    <li><span><b>Cantidad de información</b>Demasiado contenido junto supera la capacidad de atención.</span></li>
+    <li><span><b>Dificultad de la tarea</b>Las tareas complejas se dosifican para que no se abandonen a medias.</span></li>
+  </ol>
+</section>
+
+<section class="s sep" id="c10" data-short="Búsqueda" data-ribbon="una caja · un botón · resultados en orden" data-num="Capítulo 9">
+  <h2>Sistemas de búsqueda</h2>
+  <p class="lead">Rastrean, indexan y clasifican el contenido para encontrarlo rápido mediante palabras clave.</p>
+  <ul class="sub">
+    <li><a href="#busqueda"><span class="im"><img src="img/pag-google.webp" alt="" width="1006" height="604" loading="lazy" decoding="async"></span><b>Por qué</b>Dos razones.</a></li>
+    <li><a href="#busqueda-diseno"><span class="im"><img src="img/busqueda-zara.webp" alt="" width="928" height="133" loading="lazy" decoding="async"></span><b>Diseño</b>La caja y el botón.</a></li>
+    <li><a href="#busqueda-resultados"><span class="im"><img src="img/pag-resultados.webp" alt="" width="1061" height="817" loading="lazy" decoding="async"></span><b>Resultados</b>Y apartados.</a></li>
+  </ul>
+</section>
+
+<section class="s cards" id="busqueda">
+  <h3>Por qué incluir un buscador</h3>
+  <ol class="cardset">
+    <li><span><b>Control</b>El usuario decide su camino sin depender de las opciones del menú.</span></li>
+    <li><span><b>Rescate</b>Si se desorienta, puede seguir. Por eso conviene que esté en todas las páginas.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="busqueda-diseno">
+  <h3>Cómo diseñar la búsqueda</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li>Una caja de texto con un botón: «Buscar» o una lupa.</li>
+      <li>Lo bastante ancha para una búsqueda habitual.</li>
+      <li>Una buena organización del contenido, para acertar a la primera: casi nadie lo intenta dos veces.</li>
+      <li>La búsqueda avanzada confunde a muchos: mejor en la página de resultados que en la de inicio.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img src="img/busqueda-zara.webp" alt="Cabecera de Zara con el logotipo y una caja de búsqueda" width="928" height="133" loading="lazy" decoding="async"><figcaption>Zara</figcaption></figure>
+</section>
+
+<section class="s split" id="busqueda-resultados">
+  <h3>Apartados y resultados</h3>
+  <div class="txt">
+    <ol class="nums">
+      <li>Si se puede limitar a apartados, «todos» es la opción por defecto.</li>
+      <li>El apartado buscado se indica en la cabecera de los resultados.</li>
+      <li>Ampliar los apartados no cuesta esfuerzo.</li>
+      <li>Si hay demasiados resultados, se sugiere cómo acotar.</li>
+      <li>Los resultados van por relevancia: casi nadie pasa de la primera página.</li>
+    </ol>
+  </div>
+  <div class="sui" data-ui role="img" aria-label="Ejemplo de página de resultados de búsqueda con cada recomendación numerada">
+    <div class="sui-bar" aria-hidden="true">
+      <span class="sui-sel"><i class="l">1</i>Todos los apartados ▾<i>3</i></span>
+      <span class="sui-in">arquitectura</span>
+      <span class="sui-btn">Buscar</span>
+    </div>
+    <p class="sui-head" aria-hidden="true">248 resultados para «arquitectura» en todo el sitio<i>2</i></p>
+    <p class="sui-chips" aria-hidden="true">Acota: <span>arquitectura de la información</span><span>arquitectura web</span><span>cursos</span><i>4</i></p>
+    <ul class="sui-res" aria-hidden="true">
+      <li><b>Arquitectura de la información: qué es</b><small>escuela.es › recursos › ai</small>Decisiones sobre cómo organizar los contenidos…<i>5</i></li>
+      <li><b>Taxonomía web paso a paso</b><small>escuela.es › recursos › taxonomia</small>El sistema de clasificación del contenido…</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s sep" id="c2" data-short="Entregables" data-ribbon="wireframe · wireflow · sitemap · inventario · card sorting" data-num="Capítulo 10">
+  <h2>Entregables</h2>
+  <p class="lead">Documentos que reflejan el resultado del trabajo. Según el proyecto se generan unos u otros, pero lo importante es el proceso.</p>
+  <ul class="sub">
+    <li><a href="#wireframe"><span class="im"><img src="img/wireframe-tablet.webp" alt="" width="1600" height="1102" loading="lazy" decoding="async"></span><b>Wireframes</b>Esquemas de cada pantalla.</a></li>
+    <li><a href="#wireflow"><span class="im"><img src="img/wireflow.webp" alt="" width="1600" height="1270" loading="lazy" decoding="async"></span><b>Wireflows</b>Pantallas unidas por el flujo.</a></li>
+    <li><a href="#sitemap"><span class="im"><img src="img/sitemap.webp" alt="" width="655" height="711" loading="lazy" decoding="async"></span><b>Sitemap</b>Mapa de navegación.</a></li>
+    <li><a href="#wireflow"><span class="im"><img src="img/userflow.webp" alt="" width="1600" height="1459" loading="lazy" decoding="async"></span><b>Análisis de tareas</b>Task flows.</a></li>
+    <li><a href="#inventario"><span class="im"><img class="dg" src="img/svg/tabla.svg" alt="" width="300" height="170" loading="lazy" decoding="async"></span><b>Inventario</b>Qué hay y qué falta.</a></li>
+    <li><a href="#cardsorting"><span class="im"><img class="bw" src="img/cardsorting.webp" alt="" width="856" height="563" loading="lazy" decoding="async"></span><b>Card sorting</b>Cómo agrupan los usuarios.</a></li>
+  </ul>
+</section>
+
+<section class="s split" id="wireframe">
+  <h3>Wireframe</h3>
+  <div class="txt">
+    <p>Esquema visual básico que representa la estructura, la disposición y la funcionalidad de una pantalla: dónde irán los textos, los botones y las imágenes, y cómo se interactúa.</p>
+    <p>No incluye colores, tipografías ni imágenes finales. Se usa en las primeras fases del proyecto.</p>
+  </div>
+  <figure class="fig"><img src="img/wireframe-tablet.webp" alt="Wireframes en escala de grises de una web en ordenador y en móvil" width="1600" height="1102" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s cards">
+  <h3>Para qué sirve un wireframe</h3>
+  <ol class="cardset">
+    <li><span><b>Planificar</b>La disposición y la jerarquía, antes de las fases de diseño más costosas.</span></li>
+    <li><span><b>Comunicar</b>Entre diseño, desarrollo, cliente y el resto del equipo.</span></li>
+    <li><span><b>Detectar problemas pronto</b>Cuando los cambios todavía son rápidos y baratos.</span></li>
+    <li><span><b>Ahorrar tiempo</b>Se itera la estructura sin discutir aún la estética.</span></li>
+  </ol>
+</section>
+
+<section class="s gal">
+  <h3>Tipos de wireframe según su fidelidad</h3>
+  <div class="g">
+    <figure><img src="img/bocetos.webp" alt="Bocetos de wireframes dibujados a mano en papel" width="784" height="470" loading="lazy" decoding="async"><figcaption><b>Baja.</b> Bocetos a mano o con herramientas simples. Solo estructura y flujo; habituales en la lluvia de ideas.</figcaption></figure>
+    <figure><img src="img/wireframe-balsamiq.webp" alt="Wireframe digital en grises de una página de inicio" width="1268" height="965" loading="lazy" decoding="async"><figcaption><b>Media.</b> Hechos con software, con espaciado preciso y grises para la jerarquía, sin diseño final.</figcaption></figure>
+    <figure><img src="img/wireframe-movil.webp" alt="Wireframe de una pantalla de móvil con una lista de elementos" width="250" height="463" loading="lazy" decoding="async"><figcaption><b>Alta.</b> Muy cerca del producto final, con contenido real y tipografía. A menudo interactivos: prototipos.</figcaption></figure>
+  </div>
+</section>
+
+<section class="s split" id="wireflow">
+  <h3>Wireflow</h3>
+  <div class="txt">
+    <p class="lead">Estructura + interacción + navegación.</p>
+    <p>Combina los wireframes con la lógica de un diagrama de flujo. Muestra cómo navega el usuario por varias pantallas hasta completar una tarea.</p>
+  </div>
+  <figure class="fig"><img src="img/wireflow.webp" alt="Wireflow: varias pantallas de una app unidas por flechas rojas que indican la navegación" width="1600" height="1270" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s split">
+  <h3>Componentes de un wireflow</h3>
+  <div class="txt">
+    <ul class="dots">
+      <li><b>Pantallas:</b> wireframes de baja o media fidelidad de las interfaces clave.</li>
+      <li><b>Flechas y conectores:</b> la dirección del flujo y la acción que provoca cada transición (clic, deslizar…).</li>
+      <li><b>Anotaciones:</b> comportamientos del sistema, microcopy y reglas de negocio.</li>
+    </ul>
+  </div>
+  <figure class="fig"><img src="img/wireflow-ejemplo.webp" alt="Ejemplo de wireflow de una app móvil con pantallas conectadas" width="1600" height="1344" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s cards">
+  <h3>Beneficios del wireflow</h3>
+  <ol class="cardset">
+    <li><span><b>Claridad para todo el equipo</b>Una visión global fácil de entender para diseño, desarrollo, producto y cliente.</span></li>
+    <li><span><b>Detección temprana</b>Puntos de fricción, rutas confusas o errores no previstos.</span></li>
+    <li><span><b>Documentación viva</b>Se actualiza a medida que evolucionan los requisitos.</span></li>
+  </ol>
+</section>
+
+<section class="s split" id="sitemap">
+  <h3>Sitemap</h3>
+  <div class="txt">
+    <p>Muestra la estructura de contenidos del producto: la jerarquía y las relaciones de todos sus nodos clave (páginas o pantallas). Es una herramienta de planificación.</p>
+    <p>No es una lista de URLs. No está pensado para el usuario, aunque a veces se muestra en el pie de página para completar la navegación.</p>
+  </div>
+  <figure class="fig tall"><img src="img/sitemap.webp" alt="Sitemap con la página de inicio arriba y sus secciones y subsecciones conectadas debajo" width="655" height="711" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="s figs">
+  <h3>Un sitemap por niveles</h3>
+  <figure class="fig wide"><img src="img/sitemap-niveles.webp" alt="Sitemap amplio en el que el color de cada nodo indica su nivel en la jerarquía" width="1200" height="966" loading="lazy" decoding="async"><figcaption>El color de cada nodo indica su nivel en la jerarquía.</figcaption></figure>
+</section>
+
+<section class="s cards" id="sitemap-beneficios">
+  <h3>Beneficios del sitemap</h3>
+  <ol class="cardset">
+    <li><span><b>Visión global</b>Todo el equipo y el cliente ven de un vistazo qué pantallas hay y cómo se relacionan.</span></li>
+    <li><span><b>Detecta huecos y duplicados</b>Contenidos sin sitio, ramas demasiado profundas o secciones que se repiten.</span></li>
+    <li><span><b>Guía la navegación</b>Indica qué debe ir en el menú principal y qué se enlaza con navegación contextual.</span></li>
+    <li><span><b>Planifica el trabajo</b>Sirve para estimar cuántas pantallas y plantillas hay que diseñar y desarrollar.</span></li>
+  </ol>
+  <p class="foot">Además, facilita que el producto crezca: se ve dónde encaja cada contenido nuevo.</p>
+</section>
+
+<section class="s end" id="fin" data-title="Créditos">
+  <h2>Arquitectura de la información</h2>
+  <p class="lead">Interfaces gráficas de usuario · EASD Sevilla</p>
+  <div class="credits">
+    <p>Basado en los materiales de Javier Raposo (Escuela de Arte San Telmo) y en Morville, P. y Rosenfeld, L. (2007), <i>Information Architecture for the World Wide Web</i>, O'Reilly.</p>
+    <p>Fotografía de la portada: «Paper prototype of website user interface», de Sage Ross, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/w/index.php?curid=39636530">Wikimedia Commons</a>; se muestra en blanco y negro. Las capturas de sitios web se reproducen con fines docentes. Más información sobre wireflows en <a href="https://www.nngroup.com/articles/wireflows/">Nielsen Norman Group</a> y sobre card sorting en <a href="https://www.usability.gov/how-to-and-tools/methods/card-sorting.html">usability.gov</a>.</p>
+  </div>
+  <p class="actions"><a class="pill" href="#portada" data-go="0">Volver a la portada</a> <button type="button" class="pill ghost" data-open-index>Índice</button></p>
+  <div class="marq" aria-hidden="true"><span>organizar · etiquetar · navegar · buscar · organizar · etiquetar · navegar · buscar · </span><span>organizar · etiquetar · navegar · buscar · organizar · etiquetar · navegar · buscar · </span></div>
+</section>
+
+</main>
+
+<nav class="arrows only-slides" aria-label="Diapositivas">
+  <button type="button" id="prev" aria-label="Anterior">←</button>
+  <button type="button" id="next" aria-label="Siguiente">→</button>
+</nav>
+
+<dialog class="index" id="index" aria-labelledby="index-title">
+  <div class="index-head">
+    <h2 id="index-title">Índice</h2>
+    <button type="button" class="tbtn" id="index-close">Cerrar</button>
+  </div>
+  <div class="tree" id="tree"></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
