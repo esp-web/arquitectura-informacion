@@ -591,3 +591,19 @@ abbr[title]{text-decoration:none;border-bottom:0;cursor:help}
 .mode-slides .ql li.now{background:var(--lila-2);color:#fff}
 .mode-slides .ql li.now span{color:#fff}
 .mode-slides .ql li{transition:background-color .25s ease,color .25s ease}
+
+/* amplitud y profundidad */
+.keys{display:grid;gap:calc(var(--gap)*1.4);margin-top:calc(var(--gap)*1.4)}
+.keys p{margin-top:calc(var(--gap)*.8);font-size:var(--t-c)}
+/* haz / evita */
+.dd{display:grid;gap:calc(var(--gap)*1.4);margin-top:calc(var(--gap)*1.2)}
+.dd > div{border-radius:var(--r2);padding:calc(var(--gap)*1.2) calc(var(--gap)*1.4);background:rgba(255,255,255,.6)}
+.dd > div:last-child{background:var(--lila)}
+.dd-h{font-weight:600;font-size:var(--t-ct) !important;margin-bottom:.7em}
+.dd li{font-size:var(--t-c) !important}
+@container deck (min-width:760px){
+  .keys,.dd{grid-template-columns:1fr 1fr}
+  .ap .keys{max-width:70cqw;margin-inline:auto}
+}
+.mode-slides .dodont{display:flex;flex-direction:column;justify-content:center}
+.ap .key{min-height:auto}
